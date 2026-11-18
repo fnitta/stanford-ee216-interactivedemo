@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Three interactive EE 216 semiconductor demos: pn junctions, carrier statistics, and surface recombination.">
+  <title>EE 216 · Semiconductor Demo Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html">EE 216 <span class="brand-sub">/ Interactive demos</span></a>
+  </header>
+  <main id="main">
+    <section class="lab" aria-label="Interactive demonstration lab">
+      <div class="demo-tabs" aria-label="Choose a demo">
+        <button type="button" data-demo="junction" aria-pressed="true"><span class="tab-icon" aria-hidden="true">⊕ | ⊖</span><span>Pn junction<span class="tab-caption">Doping, bias & depletion</span></span></button>
+        <button type="button" data-demo="statistics" aria-pressed="false"><span class="tab-icon" aria-hidden="true">f(E)</span><span>Carrier statistics<span class="tab-caption">When Boltzmann breaks down</span></span></button>
+        <button type="button" data-demo="diffusion" aria-pressed="false"><span class="tab-icon" aria-hidden="true">∂p</span><span>Surface recombination<span class="tab-caption">Passivation & diffusion</span></span></button>
+      </div>
+      <div class="demo-heading"><h1 id="demo-title"></h1><button type="button" id="reset" class="button secondary">Reset demo</button></div>
+      <div class="workspace">
+        <aside class="controls" aria-label="Demo parameters"><p class="eyebrow">THE INPUTS</p><div id="control-fields"></div><div class="presets"><p class="control-label">Try a case</p><div id="presets"></div></div></aside>
+        <div class="results"><div id="metrics" class="metrics"></div><div class="plot-top"><h3 id="plot-title"></h3><div id="plot-modes" class="segmented"></div></div><div class="plot" id="plot"></div><p id="plot-note" class="plot-note"></p><p id="live-summary" class="screen-reader" aria-live="polite" aria-atomic="true"></p><div class="plot-footer"><span id="state-summary"></span><button class="text-button" type="button" id="csv">Download plotted data (.csv)</button></div></div>
+      </div>
+      <section class="demo-description" aria-labelledby="description-title"><h2 id="description-title">Description</h2><p id="demo-description"></p></section>
+    </section>
+    <noscript><p class="callout">Enable JavaScript to use the interactive demos.</p></noscript>
+  </main>
+  <footer><span>EE 216 · Interactive demos</span></footer>
+</body>
+</html>
